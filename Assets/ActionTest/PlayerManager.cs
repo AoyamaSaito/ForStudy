@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager
 {
-    // Start is called before the first frame update
-    void Start()
+    private Player player;
+    public void SpawnPlayer()
     {
-        
+        player.PlayerDeathCallBack += OnPlayerDeath;
     }
 
-    // Update is called once per frame
-    void Update()
+    //直接呼び出される訳ではなく、コールバックによって呼び出される
+    private void OnPlayerDeath()
     {
-        
+        //プレイヤーが死んだ時の処理
     }
 }
