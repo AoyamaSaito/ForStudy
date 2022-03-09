@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Player
 {
-    public event Action PlayerDeathCallBack;
+    public event Action<int,int> PlayerDeathCallBack;
 
     public void Death()
     {
-        PlayerDeathCallBack.Invoke();
+        PlayerDeathCallBack?.Invoke(1,1);
     }
 }

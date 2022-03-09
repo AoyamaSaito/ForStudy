@@ -11,7 +11,7 @@ public class PlayerManager
     }
 
     //直接呼び出される訳ではなく、コールバックによって呼び出される
-    private void OnPlayerDeath()
+    private void OnPlayerDeath(int n,int x)
     {
         //プレイヤーが死んだ時の処理
     }
