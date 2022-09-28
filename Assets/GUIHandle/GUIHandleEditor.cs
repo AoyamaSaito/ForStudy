@@ -14,8 +14,8 @@ public class GUIHandleEditor : Editor
         using (var cc = new EditorGUI.ChangeCheckScope())
         {
             start = Handles.PositionHandle(start, Quaternion.AngleAxis(180, t.transform.up) * t.transform.rotation);
-            Handles.Label(start, "Start", "button");
-            Handles.Label(end, "End", "button");
+            Handles.Label(start, "Start");
+            Handles.Label(end, "End");
             end = Handles.PositionHandle(end, t.transform.rotation);
             if (cc.changed)
             {
